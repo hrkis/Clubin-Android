@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="SignUpEmailFragmentDataBinding">
+
+        <variable
+            name="callback"
+            type="com.clubin.com.ui.fragment.profile.callbacks.AccountEditFragmentCallback" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".ui.auth.passwordreset.view.PasswordResetEmailActivity">
+
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            style="@style/extraBoldTextView"
+            android:text="@string/inscription_email_title"
+          />
+
+
+        <EditText
+            android:id="@+id/editTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/textViewTitle"
+            android:layout_margin="@dimen/_10ssp"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:hint="@string/email_placeholder"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp" />
+
+        <TextView
+            android:id="@+id/textViewDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextEmailAddress"
+            android:layout_marginLeft="20dp"
+            style="@style/regularTextView"
+            android:text="@string/inscription_email_correct"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:backgroundTint="@color/green"
+            android:text="@string/inscription_email_button"
+            style="@style/boldButton" />
+    </RelativeLayout>
+
+</layout>

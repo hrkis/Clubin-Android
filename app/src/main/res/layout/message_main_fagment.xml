@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mview"
+            type="com.clubin.com.ui.fragment.message.viewmodel.MessageMainViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:clickable="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/green_background_round_gradient_vertical"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/chartIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_dull_gray"
+                    android:padding="8dp"
+                    android:src="@drawable/bar_chart" />
+
+                <ImageView
+                    android:id="@+id/addIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignTop="@id/chartIcon"
+                    android:layout_alignBottom="@id/chartIcon"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/circle_dull_gray"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/chartIcon"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/messagesTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/messageTabTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MESSAGES"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/messagesTabDivider"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_below="@id/messageTabTxt"
+                            android:layout_alignStart="@id/messageTabTxt"
+                            android:layout_alignEnd="@id/messageTabTxt"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/rectangle_bright_green" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/invitationTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/invitationTabTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="INVITATIONS"
+                            android:textColor="@color/dull_white"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/invitationTabDivider"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_below="@id/invitationTabTxt"
+                            android:layout_alignStart="@id/invitationTabTxt"
+                            android:layout_alignEnd="@id/invitationTabTxt"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/rectangle_bright_green"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/notificationsTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/notificationTabTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NOTIFICATIONS"
+                            android:textColor="@color/dull_white"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/notificationsTabDivider"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_below="@id/notificationTabTxt"
+                            android:layout_alignStart="@id/notificationTabTxt"
+                            android:layout_alignEnd="@id/notificationTabTxt"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/rectangle_bright_green"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/messageMainContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

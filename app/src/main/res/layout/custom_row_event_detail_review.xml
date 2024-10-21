@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="170dp"
+    android:background="@drawable/rectangle_black_opaque_round_corner"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="15dp"
+    android:layout_marginRight="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/personImage"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:src="@drawable/dummy_people" />
+
+    <TextView
+        android:id="@+id/nameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/personImage"
+        style="@style/regularTextView"
+        android:text="Paul"
+        android:textSize="16sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTxt"
+        android:layout_alignStart="@id/nameTxt"
+        android:layout_marginTop="5dp"
+        android:isIndicator="true"
+        android:max="5"
+        android:numStars="5"
+        android:rating="5"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:stepSize="5"
+        android:theme="@style/RatingBar"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp" />
+
+    <TextView
+        android:id="@+id/ratingTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/personImage"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        style="@style/regularTextView"
+        android:text="Last time was Amazing! Alex knows how to organize good parties ! Don't Hesitate !"
+        android:textColor="@color/dull_white"
+        android:textSize="12sp" />
+
+</RelativeLayout>

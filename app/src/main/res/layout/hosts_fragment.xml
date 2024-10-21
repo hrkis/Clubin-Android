@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mview"
+            type="com.clubin.com.ui.fragment.hosts.viewmodel.HostsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:clickable="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/green_background_round_gradient_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_dull_gray"
+                    android:padding="8dp"
+                    android:src="@drawable/bar_chart" />
+
+                <LinearLayout
+                    android:id="@+id/createTab"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/createTabTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/semiBoldTextView"
+                        android:text="CRÉER" />
+
+                    <View
+                        android:id="@+id/createTabDivider"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rectangle_bright_green" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/onlineTab"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/onlineTabTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/semiBoldTextView"
+                        android:text="EN LIGNE" />
+
+                    <View
+                        android:id="@+id/onlineTabDivider"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rectangle_bright_green"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/createContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="15dp"
+                    style="@style/boldTextView"
+                    android:text="Quand organisez-vous votre prochain évènement ?" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:button="@null"
+                    android:buttonTint="@color/bright_green"
+                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                    android:drawableTint="@color/bright_green"
+                    android:text="Event sur plusieurs jours"
+                    android:textColor="@color/bright_green_new"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/monthTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/semiBoldTextView"
+                        android:text="April 2022" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="5dp"
+                        android:rotation="270"
+                        android:src="@drawable/down_arrow"
+                        app:tint="@color/bright_green_new" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/prevMonth"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:padding="8dp"
+                        android:rotation="90"
+                        android:src="@drawable/down_arrow"
+                        app:tint="@color/bright_green" />
+
+                    <ImageView
+                        android:id="@+id/nxtMonth"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:padding="8dp"
+                        android:rotation="270"
+                        android:src="@drawable/down_arrow"
+                        app:tint="@color/bright_green_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/regularTextView"
+                        android:gravity="center"
+                        android:text="SUN"
+                        android:textColor="@color/dull_white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/regularTextView"
+                        android:gravity="center"
+                        android:text="MON"
+                        android:textColor="@color/dull_white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/regularTextView"
+                        android:gravity="center"
+                        android:text="TUE"
+                        android:textColor="@color/dull_white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/regularTextView"
+                        android:gravity="center"
+                        android:text="WED"
+                        android:textColor="@color/dull_white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/regularTextView"
+                        android:gravity="center"
+                        android:text="THU"
+                        android:textColor="@color/dull_white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/regularTextView"
+                        android:gravity="center"
+                        android:text="FRI"
+                        android:textColor="@color/dull_white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/regularTextView"
+                        android:gravity="center"
+                        android:text="SAT"
+                        android:textColor="@color/dull_white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <com.kizitonwose.calendarview.CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cv_dayViewResource="@layout/calendar_day_layout"
+                    app:cv_scrollMode="paged"
+                    app:cv_orientation="horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    style="@style/semiBoldTextView"
+                    android:paddingHorizontal="10dp"
+                    android:text="Votre event aura lieu le " />
+
+                <TextView
+                    android:id="@+id/chooseThisDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="20dp"
+                    android:background="@drawable/btn_red_grad_with_arrow"
+                    style="@style/semiBoldTextView"
+                    android:gravity="center"
+                    android:text="Choisir cette date"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/onlineContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="15dp"
+                    style="@style/boldTextView"
+                    android:text="Online event" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

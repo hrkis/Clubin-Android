@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="mview"
+            type="com.clubin.com.ui.fragment.tickets.viewmodel.TicketReservationViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/black"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/boldTextView"
+                android:text="En attente" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/waitingRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginVertical="15dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/boldTextView"
+                android:text="Réservés" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reserveRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginVertical="15dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/boldTextView"
+                android:text="Evènements terminés" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/endedEventsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginVertical="15dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

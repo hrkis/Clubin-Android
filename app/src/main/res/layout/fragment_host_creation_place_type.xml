@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="HostCreationPlaceTypeFragmentDataBinding">
+
+        <variable
+            name="mview"
+            type="com.clubin.com.ui.fragment.hosts.model.HostCreationAddressDetailsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:rotation="180"
+                android:src="@drawable/right_arrow" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/closeBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:rotation="180"
+                android:src="@drawable/ic_close_delete_icon"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            style="@style/boldTextView"
+            android:text="Définissez le type de lieu"
+            android:textSize="22sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:visibility="visible"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAppartement"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:text="Appartement"
+                app:chipStrokeWidth="1dp"
+                android:textColor="@color/white"
+                app:chipStrokeColor="@color/white"
+                android:textSize="16sp"
+                app:chipBackgroundColor="@color/black_background" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMaison"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:text="Maison"
+                app:chipStrokeWidth="1dp"
+                app:chipStrokeColor="@color/white"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:chipBackgroundColor="@color/black_background" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipVilla"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:text="Villa"
+                app:chipStrokeWidth="1dp"
+                android:textColor="@color/white"
+                app:chipStrokeColor="@color/white"
+                app:chipBackgroundColor="@color/black_background" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipLieuexception"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:text="Lieu d/'exception"
+                android:textColor="@color/white"
+                app:chipStrokeColor="@color/white"
+                app:chipStrokeWidth="1dp"
+                android:textSize="16sp"
+                app:chipBackgroundColor="@color/black_background" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            style="@style/boldTextView"
+            android:text="Autres"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextAutres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:ems="10"
+            style="@style/mediumTextView"
+            android:hint="Précisez"
+            android:inputType="textPersonName"
+            android:textColor="@color/text_light_white" />
+
+        <TextView
+            android:id="@+id/continueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="30dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/btn_red_grad_with_arrow"
+            style="@style/semiBoldTextView"
+            android:gravity="center"
+            android:text="Continuer"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+</layout>

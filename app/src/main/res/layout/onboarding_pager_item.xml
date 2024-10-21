@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/onboarding_screen">
+
+        <ImageView
+            android:id="@+id/iv_onboarding"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:background="@drawable/apple"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@id/center_heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/center_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/regularTextView"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:text="@string/onboarding_one_headline"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_23ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            style="@style/regularTextView"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/_3sdp"
+            android:text="@string/onboarding_heading"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_onboarding" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/regularTextView"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="@dimen/_5sdp"
+            android:text="@string/onboarding_message"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_heading"
+            app:layout_constraintVertical_bias="0.251" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

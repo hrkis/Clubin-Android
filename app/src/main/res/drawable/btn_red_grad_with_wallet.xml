@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="22dp" />
+            <size
+                android:width="200dp"
+                android:height="44dp" />
+            <stroke
+                android:width="2dp"
+                android:color="#BD2D50" />
+        </shape>
+    </item>
+    <item
+        android:width="20dp"
+        android:height="20dp"
+        android:top="11dp"
+        android:drawable="@drawable/wallet_pass"
+        android:gravity="end"
+        android:left="180dp"
+        android:right="20dp" />
+
+    <item android:right="54dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:endColor="@color/btn_orange"
+                android:gradientRadius="150dp"
+                android:startColor="@color/btn_pink"
+                android:type="linear" />
+            <size
+                android:width="160dp"
+                android:height="44dp" />
+            <corners android:radius="22dp" />
+        </shape>
+    </item>
+</layer-list>

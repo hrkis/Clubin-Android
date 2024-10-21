@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imgViewCard"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cocktail" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/nxtIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:rotation="270"
+            android:src="@drawable/down_arrow"
+            app:tint="@color/dull_white" />
+
+        <ImageView
+            android:id="@+id/attachmentIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/imgViewCard"
+            android:rotation="310"
+            android:src="@drawable/ic_insert_link_24" />
+
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@id/nxtIcon"
+            android:layout_toRightOf="@id/attachmentIcon"
+            android:ellipsize="end"
+            style="@style/boldTextView"
+            android:maxLines="1"
+            android:text="Big Event"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/descriptionTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTxt"
+            android:layout_alignStart="@id/attachmentIcon"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@id/nxtIcon"
+            android:ellipsize="end"
+            style="@style/regularTextView"
+            android:maxLines="1"
+            android:text="Voici votre lien vers la conversation Whatsapp"
+            android:textColor="@color/dull_white"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
